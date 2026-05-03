@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private InputSystem inputActions;
     private bool isGrounded = true;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private float groundCheckRadius;
+    [SerializeField] private LayerMask groundLayer;
 
     void Awake()
     {
@@ -26,6 +29,16 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Move.performed += Move;
         inputActions.Player.Move.canceled += ctx => MoveAxes = 0;
     }
+    void Update()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+    }
+    // void OnDrawGizmosSelected()
+    // {
+    //     if (groundCheck == null) return;
+    //     Gizmos.color = Color.red;
+    //     Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    // }
 
     void OnEnable()
     {
