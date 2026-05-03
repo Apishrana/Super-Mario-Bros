@@ -10,38 +10,50 @@ public class PlayerMovement : MonoBehaviour
     private float JumpVel;
     [SerializeField]
     private float HighJumpVel;
-
+    private float MoveAxes;
     private Rigidbody2D rb;
+    private InputSystem inputActions;
+    private bool isGrounded = true;
 
-    void Start()
+    void Awake()
     {
         rb = transform.GetComponent<Rigidbody2D>();
-        InputSystem inputActions = new InputSystem();
+        inputActions = new InputSystem();
 
-        inputActions.Player.Enable();
 
         inputActions.Player.Jump.performed += Jump;
         inputActions.Player.HighJump.performed += HighJump;
+        inputActions.Player.Move.performed += Move;
+        inputActions.Player.Move.canceled += ctx => MoveAxes = 0;
     }
 
-    void Update()
+    void OnEnable()
     {
+        inputActions.Player.Enable();
     }
+    void OnDisable()
+    {
+        inputActions.Player.Disable();
+    }
+
     void FixedUpdate()
     {
-        rb.linearVelocity = new Vector2(Speed * Input.GetAxis("Horizontal"), rb.linearVelocityY);
+        rb.linearVelocity = new Vector2(MoveAxes * Speed, rb.linearVelocityY);
     }
 
     void HighJump(InputAction.CallbackContext context)
     {
-        Debug.LogWarning(context);
         rb.linearVelocity += new Vector2(0, HighJumpVel);
-
-
     }
     void Jump(InputAction.CallbackContext context)
     {
-        Debug.LogWarning(context);
+        if (!isGrounded) return;
+        isGrounded = false;
         rb.linearVelocity += new Vector2(0, JumpVel);
+    }
+
+    void Move(InputAction.CallbackContext context)
+    {
+        MoveAxes = context.ReadValue<float>();
     }
 }
