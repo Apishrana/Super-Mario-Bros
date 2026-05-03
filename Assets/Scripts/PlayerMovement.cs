@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float JumpForce;
 
-    private 
+     
 
     void Start()
     {
