@@ -10,7 +10,8 @@ public class HeadCheck : MonoBehaviour
     [SerializeField] private LayerMask layer;
     public void checkHead()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(headCheck.position, headCheckRadius, layer);
+        Vector2 boxSize = new Vector2(headCheckRadius * 2, headCheckRadius);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(headCheck.position, boxSize, 0f, layer);
 
         if (hits.Length == 0)
         {
@@ -36,6 +37,7 @@ public class HeadCheck : MonoBehaviour
     {
         if (headCheck == null) return;
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(headCheck.position, headCheckRadius);
+        Vector3 boxSize = new Vector3(headCheckRadius * 2, headCheckRadius, 0);
+        Gizmos.DrawWireCube(headCheck.position, boxSize);
     }
 }
