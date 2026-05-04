@@ -107,7 +107,7 @@ public partial class @InputSystem: IInputActionCollection2, IDisposable
                     ""id"": ""b78aed88-3aa8-4287-8aa0-0bcc28959d67"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""Hold(pressPoint=0.4)"",
+                    ""interactions"": ""Hold(duration=0.15,pressPoint=0.05)"",
                     ""initialStateCheck"": false
                 },
                 {
