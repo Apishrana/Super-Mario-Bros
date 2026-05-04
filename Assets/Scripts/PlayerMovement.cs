@@ -13,7 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private float MoveAxes;
     private Rigidbody2D rb;
     private InputSystem inputActions;
+    private HeadCheck headCheck;
     private bool isGrounded = true;
+    private bool colliding = true;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
@@ -21,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = transform.GetComponent<Rigidbody2D>();
+        headCheck = transform.GetComponent<HeadCheck>();
         inputActions = new InputSystem();
 
 
@@ -31,7 +34,15 @@ public class PlayerMovement : MonoBehaviour
     }
     void Update()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = colliding;
+
+        if (!isGrounded)
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+        if (!isGrounded)
+        {
+            headCheck.checkHead();
+        }
     }
     // void OnDrawGizmosSelected()
     // {
@@ -68,5 +79,14 @@ public class PlayerMovement : MonoBehaviour
     void Move(InputAction.CallbackContext context)
     {
         MoveAxes = context.ReadValue<float>();
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        colliding = true;
+    }
+    void OnCollisionExit2D(Collision2D other)
+    {
+        colliding = false;
     }
 }
