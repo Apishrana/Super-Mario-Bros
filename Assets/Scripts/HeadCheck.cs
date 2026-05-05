@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -15,7 +14,6 @@ public class HeadCheck : MonoBehaviour
 
         if (hits.Length == 0)
         {
-            Debug.LogWarning("Nothing hit");
             return;
         }
 
@@ -23,7 +21,6 @@ public class HeadCheck : MonoBehaviour
         {
             if (hit.gameObject == gameObject) continue;
 
-            Debug.Log("Hit: " + hit.name);
 
             Tilemap tilemap = hit.GetComponent<Tilemap>();
             if (tilemap != null)
@@ -33,11 +30,11 @@ public class HeadCheck : MonoBehaviour
             }
         }
     }
-    void OnDrawGizmosSelected()
-    {
-        if (headCheck == null) return;
-        Gizmos.color = Color.yellow;
-        Vector3 boxSize = new Vector3(headCheckRadius * 2, headCheckRadius, 0);
-        Gizmos.DrawWireCube(headCheck.position, boxSize);
-    }
+    // void OnDrawGizmosSelected()
+    // {
+    //     if (headCheck == null) return;
+    //     Gizmos.color = Color.yellow;
+    //     Vector3 boxSize = new Vector3(headCheckRadius * 2, headCheckRadius, 0);
+    //     Gizmos.DrawWireCube(headCheck.position, boxSize);
+    // }
 }
