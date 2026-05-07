@@ -51,8 +51,16 @@ public class PlayerAnimate : MonoBehaviour
         animator.SetBool("Unkillable", true);
         animator.SetTrigger("Shrink");
         animator.ResetTrigger("Shrink");
-        await Awaitable.WaitForSecondsAsync(0.7f, destroyCancellationToken);
+        await Awaitable.WaitForSecondsAsync(1.333f, destroyCancellationToken);
         animator.SetBool("Unkillable", false);
+    }
+    public void Crouch()
+    {
+        animator.SetBool("Crouhed", true);
+    }
+    public void StopCrouch()
+    {
+        animator.SetBool("Crouhed", false);
     }
 
 }
