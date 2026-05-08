@@ -126,8 +126,8 @@
   <Project Path="Unity.RenderPipeline.Universal.ShaderLibrary.csproj" />
   <Project Path="Unity.AI.Assistant.Bridge.Editor.csproj" />
   <Project Path="Unity.AI.Toolkit.Compliance.csproj" />
-  <Project Path="Unity.InternalAPIEngineBridge.004.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Unity.InternalAPIEngineBridge.004.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Unity.RenderPipelines.Universal.Shaders.csproj" />
   <Project Path="Unity.AI.Toolkit.GenerationContextMenu.csproj" />
