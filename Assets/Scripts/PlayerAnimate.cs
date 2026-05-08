@@ -41,7 +41,7 @@ public class PlayerAnimate : MonoBehaviour
     {
         animator.SetBool("Unkillable", true);
         animator.SetTrigger("Grow");
-        animator.ResetTrigger("Grow");
+        // animator.ResetTrigger("Grow");
         await Awaitable.WaitForSecondsAsync(0.7f, destroyCancellationToken);
         animator.SetBool("Unkillable", false);
     }
@@ -50,7 +50,7 @@ public class PlayerAnimate : MonoBehaviour
     {
         animator.SetBool("Unkillable", true);
         animator.SetTrigger("Shrink");
-        animator.ResetTrigger("Shrink");
+        // animator.ResetTrigger("Shrink");
         await Awaitable.WaitForSecondsAsync(1.333f, destroyCancellationToken);
         animator.SetBool("Unkillable", false);
     }

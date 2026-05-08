@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -109,6 +110,13 @@ public class PlayerMovement : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         colliding = true;
+        if (other.gameObject.CompareTag("Mushroom"))
+        {
+            Destroy(other.gameObject);
+            Task task = playerAnimate.grow();
+
+        }
+
     }
     void OnCollisionExit2D(Collision2D other)
     {

@@ -11,6 +11,9 @@ public class MushroomController : MonoBehaviour
     private Transform LEdge;
     [SerializeField]
     private float rad;
+    [SerializeField]
+    private LayerMask ground;
+
 
 
     void Update()
@@ -18,15 +21,12 @@ public class MushroomController : MonoBehaviour
         transform.position += new Vector3(speed * Time.deltaTime, 0);
         if (speed > 0)
         {
-            Debug.Log(Physics2D.OverlapCircleAll(REdge.position, rad));
-            Debug.Log(1);
-            Collider2D[] hits = Physics2D.OverlapCircleAll(REdge.position, rad);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(REdge.position, rad, ground);
 
             foreach (var hit in hits)
             {
                 if (hit.gameObject != gameObject)
                 {
-                    Debug.Log("Hit: " + hit.name);
                     speed *= -1;
                 }
             }
@@ -35,15 +35,12 @@ public class MushroomController : MonoBehaviour
         }
         else
         {
-            Debug.Log(Physics2D.OverlapCircleAll(LEdge.position, rad));
-            Debug.Log(2);
-            Collider2D[] hits = Physics2D.OverlapCircleAll(LEdge.position, rad);
+            Collider2D[] hits = Physics2D.OverlapCircleAll(LEdge.position, rad, ground);
 
             foreach (var hit in hits)
             {
                 if (hit.gameObject != gameObject)
                 {
-                    Debug.Log("Hit: " + hit.name);
                     speed *= -1;
                 }
             }
