@@ -284,7 +284,7 @@ MonoBehaviour:
   HighJumpVel: 4
   groundCheck: {fileID: 921702723640180416}
   sprite: {fileID: 3335306762612320375}
-  groundCheckRadius: 0.1
+  groundCheckRadius: 0.124
   groundLayer:
     serializedVersion: 2
     m_Bits: 72

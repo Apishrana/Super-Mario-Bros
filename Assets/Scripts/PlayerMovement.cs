@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private InputSystem inputActions;
     private HeadCheck headCheck;
     private bool isGrounded = true;
-    private bool colliding = true;
+    private bool crouched = false;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private float groundCheckRadius;
@@ -35,14 +35,13 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Jump.performed += Jump;
         inputActions.Player.HighJump.performed += HighJump;
         inputActions.Player.Move.performed += Move;
+        inputActions.Player.Crouch.started += ctx => crouched = true;
+        inputActions.Player.Crouch.canceled += ctx => crouched = false;
         inputActions.Player.Move.canceled += ctx => MoveAxes = 0;
     }
     void Update()
     {
-        isGrounded = colliding;
-
-        if (!isGrounded)
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckRadius * 8, groundCheckRadius), 0f, groundLayer);
 
         if (!isGrounded)
         {
@@ -68,12 +67,21 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimate.StopWalk();
         }
+        if (crouched)
+        {
+            playerAnimate.Crouch();
+        }
+        else
+        {
+            playerAnimate.StopCrouch();
+        }
     }
+
     // void OnDrawGizmosSelected()
     // {
     //     if (groundCheck == null) return;
     //     Gizmos.color = Color.red;
-    //     Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    //     Gizmos.DrawWireCube(groundCheck.position, new Vector3(groundCheckRadius * 8, groundCheckRadius, 0));
     // }
 
     void OnEnable()
@@ -103,13 +111,13 @@ public class PlayerMovement : MonoBehaviour
 
     void Move(InputAction.CallbackContext context)
     {
-        MoveAxes = context.ReadValue<float>();
+        if (!crouched)
+            MoveAxes = context.ReadValue<float>();
 
     }
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        colliding = true;
         if (other.gameObject.CompareTag("Mushroom"))
         {
             Destroy(other.gameObject);
@@ -117,9 +125,5 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-    }
-    void OnCollisionExit2D(Collision2D other)
-    {
-        colliding = false;
     }
 }
