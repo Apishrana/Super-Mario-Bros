@@ -282,12 +282,13 @@ MonoBehaviour:
   Speed: 10
   JumpVel: 18
   HighJumpVel: 4
+  Cam: {fileID: 0}
   groundCheck: {fileID: 921702723640180416}
   sprite: {fileID: 3335306762612320375}
-  groundCheckRadius: 0.124
+  groundCheckRadius: 0.12
   groundLayer:
     serializedVersion: 2
-    m_Bits: 72
+    m_Bits: 200
 --- !u!114 &7545137561860932319
 MonoBehaviour:
   m_ObjectHideFlags: 0

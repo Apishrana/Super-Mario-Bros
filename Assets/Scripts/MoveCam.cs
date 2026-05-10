@@ -4,8 +4,8 @@ public class MoveCam : MonoBehaviour
 {
     public float CamY;
     public float CamX;
-    [SerializeField] private float CamMinX;
-    [SerializeField] private float CamMaxX;
+    [SerializeField] public float CamMinX;
+    [SerializeField] public float CamMaxX;
     [SerializeField] private Transform player;
     void Start()
     {

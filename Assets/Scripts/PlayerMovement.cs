@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -17,10 +18,13 @@ public class PlayerMovement : MonoBehaviour
     private HeadCheck headCheck;
     private bool isGrounded = true;
     private bool crouched = false;
+    [SerializeField] private MoveCam Cam;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
+
+
 
     PlayerAnimate playerAnimate;
 
@@ -115,6 +119,14 @@ public class PlayerMovement : MonoBehaviour
             MoveAxes = context.ReadValue<float>();
 
     }
+    void EnterPipe(Pipe pipe)
+    {
+        transform.position = pipe.tpPos;
+        Cam.CamMaxX = pipe.camMaxX;
+        Cam.CamMinX = pipe.camMinX;
+        Cam.CamX = pipe.camMinX;
+        Cam.CamY = pipe.camY;
+    }
 
     void OnCollisionEnter2D(Collision2D other)
     {
@@ -122,8 +134,21 @@ public class PlayerMovement : MonoBehaviour
         {
             Destroy(other.gameObject);
             Task task = playerAnimate.grow();
-
         }
-
+    }
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Pipe"))
+        {
+            Pipe pipe = other.transform.GetComponentInParent<Pipe>();
+            if (crouched && pipe.pipeType == Pipe.PipeType.Vertical)
+            {
+                EnterPipe(pipe);
+            }
+            if (MoveAxes > 0.2f && pipe.pipeType == Pipe.PipeType.Horizontal)
+            {
+                EnterPipe(pipe);
+            }
+        }
     }
 }
