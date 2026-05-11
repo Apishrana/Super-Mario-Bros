@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -23,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
+    private bool Grown = false;
+
+    private bool unKillable = false;
 
 
 
@@ -47,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckRadius * 8, groundCheckRadius), 0f, groundLayer);
 
-        if (!isGrounded)
+        if (!isGrounded && Grown)
         {
             headCheck.checkHead();
         }
@@ -133,8 +137,37 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Mushroom"))
         {
             Destroy(other.gameObject);
-            Task task = playerAnimate.grow();
+            if (!Grown)
+            {
+                playerAnimate.grow();
+                unKillable = true;
+                playerAnimate.Unkillable(true);
+                Grown = true;
+                StartCoroutine(StopUnkillable(0.7f));
+            }
         }
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            if (Grown)
+            {
+                playerAnimate.shrink();
+                Grown = false;
+                unKillable = true;
+                playerAnimate.Unkillable(true);
+                StartCoroutine(StopUnkillable(1.333f));
+            }
+            if (!Grown && !unKillable)
+            {
+                playerAnimate.dead();
+            }
+        }
+    }
+
+    IEnumerator StopUnkillable(float time)
+    {
+        yield return new WaitForSeconds(time);
+        unKillable = false;
+        playerAnimate.Unkillable(false);
     }
     void OnTriggerStay2D(Collider2D other)
     {

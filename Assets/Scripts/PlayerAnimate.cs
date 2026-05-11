@@ -37,20 +37,18 @@ public class PlayerAnimate : MonoBehaviour
         animator.SetFloat("WalkSpeed", 1f);
     }
 
-    public async Task grow()
+    public void grow()
     {
-        animator.SetBool("Unkillable", true);
         animator.SetTrigger("Grow");
-        await Awaitable.WaitForSecondsAsync(0.7f, destroyCancellationToken);
-        animator.SetBool("Unkillable", false);
     }
 
-    public async Task shrink()
+    public void shrink()
     {
-        animator.SetBool("Unkillable", true);
         animator.SetTrigger("Shrink");
-        await Awaitable.WaitForSecondsAsync(1.333f, destroyCancellationToken);
-        animator.SetBool("Unkillable", false);
+    }
+    public void Unkillable(bool val)
+    {
+        animator.SetBool("Unkillable", val);
     }
     public void Crouch()
     {
@@ -59,6 +57,11 @@ public class PlayerAnimate : MonoBehaviour
     public void StopCrouch()
     {
         animator.SetBool("Crouhed", false);
+    }
+    public void dead()
+    {
+
+        animator.SetTrigger("Dead");
     }
 
 }

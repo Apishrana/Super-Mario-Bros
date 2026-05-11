@@ -7,6 +7,7 @@ TagManager:
   - Breakable
   - Mushroom
   - Pipe
+  - Enemy
   layers:
   - Default
   - TransparentFX

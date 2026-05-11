@@ -28,6 +28,7 @@ public class HeadCheck : MonoBehaviour
                 Vector3Int cellPos = tilemap.WorldToCell(new Vector3(headCheck.position.x, headCheck.position.y + 1));
                 tilemap.SetTile(cellPos, null);
             }
+
         }
     }
     // void OnDrawGizmosSelected()
