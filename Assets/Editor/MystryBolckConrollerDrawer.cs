@@ -9,12 +9,16 @@ public class MystryBolckConrollerDrawer : Editor
         SerializedProperty emptySprite = serializedObject.FindProperty("emptySprite");
         SerializedProperty bolckType = serializedObject.FindProperty("bolckType");
         SerializedProperty animationCurve = serializedObject.FindProperty("animationCurve");
+        SerializedProperty animationDuration = serializedObject.FindProperty("animationDuration");
+        SerializedProperty moveDistance = serializedObject.FindProperty("moveDistance");
         SerializedProperty coinCount = serializedObject.FindProperty("coinCount");
         SerializedProperty mushroomPrefab = serializedObject.FindProperty("mushroomPrefab");
         SerializedProperty starPrefab = serializedObject.FindProperty("starPrefab");
         EditorGUILayout.PropertyField(emptySprite);
         EditorGUILayout.PropertyField(bolckType);
         EditorGUILayout.PropertyField(animationCurve);
+        EditorGUILayout.PropertyField(animationDuration);
+        EditorGUILayout.PropertyField(moveDistance);
         MystryBolckConroller.BolckType type =
             (MystryBolckConroller.BolckType)bolckType.enumValueIndex;
 
