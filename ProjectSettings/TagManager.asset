@@ -9,6 +9,7 @@ TagManager:
   - Pipe
   - Enemy
   - Bounds
+  - Coins
   layers:
   - Default
   - TransparentFX

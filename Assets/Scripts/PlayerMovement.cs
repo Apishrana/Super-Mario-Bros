@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Tilemaps;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,7 +29,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool unKillable = false;
 
-
+    public int coinCount;
 
     PlayerAnimate playerAnimate;
 
@@ -183,6 +184,55 @@ public class PlayerMovement : MonoBehaviour
                 EnterPipe(pipe);
             }
         }
+        if (other.gameObject.CompareTag("Coins"))
+        {
+            Tilemap tilemap = other.GetComponent<Tilemap>();
+            if (tilemap != null)
+            {
+                Vector3Int cellPos = tilemap.WorldToCell(new Vector3(transform.position.x, transform.position.y - 1));
+
+                if (tilemap.GetTile(cellPos) != null)
+                {
+                    tilemap.SetTile(cellPos, null);
+                    coinCount += 1;
+                }
+                cellPos = tilemap.WorldToCell(new Vector3(transform.position.x + .5f, transform.position.y - 1));
+
+                if (tilemap.GetTile(cellPos) != null)
+                {
+                    tilemap.SetTile(cellPos, null);
+                    coinCount += 1;
+                }
+                cellPos = tilemap.WorldToCell(new Vector3(transform.position.x - .5f, transform.position.y - 1));
+
+                if (tilemap.GetTile(cellPos) != null)
+                {
+                    tilemap.SetTile(cellPos, null);
+                    coinCount += 1;
+                }
+                if (Grown)
+                {
+                    cellPos = tilemap.WorldToCell(new Vector3(transform.position.x, transform.position.y));
+                    if (tilemap.GetTile(cellPos) != null)
+                    {
+                        tilemap.SetTile(cellPos, null);
+                        coinCount += 1;
+                    }
+                    cellPos = tilemap.WorldToCell(new Vector3(transform.position.x + .5f, transform.position.y));
+                    if (tilemap.GetTile(cellPos) != null)
+                    {
+                        tilemap.SetTile(cellPos, null);
+                        coinCount += 1;
+                    }
+                    cellPos = tilemap.WorldToCell(new Vector3(transform.position.x - .5f, transform.position.y));
+                    if (tilemap.GetTile(cellPos) != null)
+                    {
+                        tilemap.SetTile(cellPos, null);
+                        coinCount += 1;
+                    }
+                }
+            }
+        }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -197,6 +247,5 @@ public class PlayerMovement : MonoBehaviour
             }
             finally { }
         }
-
     }
 }
