@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 921702723640180416}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7611633695107321531}
   - component: {fileID: 3335306762612320375}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 361187067019853031}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Head check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 3009592988080293233}
   - component: {fileID: 5246116136934095464}
   - component: {fileID: 5795458428268801549}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -282,6 +282,7 @@ MonoBehaviour:
   Speed: 10
   JumpVel: 18
   HighJumpVel: 4
+  RecoilVel: 4
   Cam: {fileID: 0}
   groundCheck: {fileID: 921702723640180416}
   sprite: {fileID: 3335306762612320375}

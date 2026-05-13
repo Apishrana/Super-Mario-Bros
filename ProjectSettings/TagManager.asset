@@ -8,6 +8,7 @@ TagManager:
   - Mushroom
   - Pipe
   - Enemy
+  - Bounds
   layers:
   - Default
   - TransparentFX
@@ -17,9 +18,9 @@ TagManager:
   - UI
   - Breakable
   - Pipe
-  - 
-  - 
-  - 
+  - Mushroom
+  - Enemy
+  - Player
   - 
   - 
   - 

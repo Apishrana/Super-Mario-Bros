@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Threading.Tasks;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     private float JumpVel;
     [SerializeField]
     private float HighJumpVel;
+    [SerializeField]
+    private float RecoilVel;
     private float MoveAxes;
     private Rigidbody2D rb;
     private InputSystem inputActions;
@@ -183,5 +183,20 @@ public class PlayerMovement : MonoBehaviour
                 EnterPipe(pipe);
             }
         }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            try
+            {
+                other.transform.parent.GetComponent<GoombaController>().Kill();
+                other.transform.GetComponent<BoxCollider2D>().enabled = false;
+                rb.linearVelocityY = RecoilVel;
+
+            }
+            finally { }
+        }
+
     }
 }
