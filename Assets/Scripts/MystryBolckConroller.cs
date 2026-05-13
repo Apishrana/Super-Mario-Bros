@@ -30,27 +30,40 @@ public class MystryBolckConroller : MonoBehaviour
             sprite = transform.GetChild(0);
         }
     }
-    public void hit(PlayerMovement player)
+    public IEnumerator hit(PlayerMovement player)
     {
         if (isAnimating)
         {
-            return;
+            yield break;
         }
 
-        StartCoroutine(AnimateBlock());
+        yield return StartCoroutine(AnimateBlock());
 
         switch (bolckType)
         {
             case BolckType.Coin:
-                Debug.Log(1);
+                player.coinCount++;
+                coinCount--;
+                if (coinCount == 0)
+                {
+                    Destroy(this);
+                }
                 break;
 
             case BolckType.Mushroom:
-                Debug.Log(1);
+                if (mushroomPrefab != null)
+                {
+                    Instantiate(mushroomPrefab, transform.position + Vector3.up, Quaternion.identity);
+                }
+                Destroy(this);
                 break;
 
             case BolckType.Star:
-                Debug.Log(1);
+                if (starPrefab != null)
+                {
+                    Instantiate(starPrefab, transform.position + Vector3.up, Quaternion.identity);
+                }
+                Destroy(this);
                 break;
 
         }

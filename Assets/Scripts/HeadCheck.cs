@@ -27,7 +27,7 @@ public class HeadCheck : MonoBehaviour
             if (hit.gameObject == gameObject) continue;
             if (hit.gameObject.CompareTag("Mystry Block"))
             {
-                hit.transform.GetComponent<MystryBolckConroller>().hit(this.GetComponent<PlayerMovement>());
+                StartCoroutine(hit.transform.GetComponent<MystryBolckConroller>().hit(this.GetComponent<PlayerMovement>()));
 
             }
             else if (hit.gameObject.CompareTag("Breakable"))
@@ -73,15 +73,8 @@ public class HeadCheck : MonoBehaviour
                                         StartCoroutine(AnimateTile(tilemap, cellPos));
                                 }
                             }
-
                         }
-
                     }
-
-
-
-
-
                 }
             }
             // void OnDrawGizmosSelected()

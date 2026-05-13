@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8605347338699120472}
   - component: {fileID: 4741891287104925925}
   - component: {fileID: 1639116106992384954}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: MystryBolck
-  m_TagString: Untagged
+  m_TagString: Mystry Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306ab15b8eb2444009a75a5d553b11d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MystryBolckConroller
+  emptySprite: {fileID: 0}
+  sprite: {fileID: 0}
+  bolckType: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5042787
+      value: 0.50448173
+      inSlope: -0.009345185
+      outSlope: -0.009345185
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9958455
+      value: -0.0023805532
+      inSlope: -2.0811918
+      outSlope: -2.0811918
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.058588903
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  coinCount: 0
+  mushroomPrefab: {fileID: 0}
+  starPrefab: {fileID: 0}
+  animationDuration: 0.25
+  moveDistance: 0.5
 --- !u!1 &7504284786917492572
 GameObject:
   m_ObjectHideFlags: 0
@@ -142,7 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4214720762089907839}
   - component: {fileID: 267136193053620728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13176,78 +13176,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MystryBolck (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 796944354790644096, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 796944354790644096, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_TagString
-      value: Mystry Block
+    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
+      propertyPath: coinCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: bolckType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].time
-      value: 0.5042787
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].time
-      value: 0.9958455
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].value
-      value: 0.50448173
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].value
-      value: -0.0023805532
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[0].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].inSlope
-      value: -0.009345185
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].inSlope
-      value: -2.0811918
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[0].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].outSlope
-      value: -0.009345185
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].inWeight
-      value: 0.058588903
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].outSlope
-      value: -2.0811918
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504284786917492572, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: -6127694108565813698, guid: 51a21fea38e1f4ae7927eee1352f4626, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13315,78 +13251,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: MystryBolck (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 796944354790644096, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 796944354790644096, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_TagString
-      value: Mystry Block
-      objectReference: {fileID: 0}
     - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
       propertyPath: bolckType
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].time
-      value: 0.5042787
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].time
-      value: 0.9958455
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].value
-      value: 0.50448173
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].value
-      value: -0.0023805532
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[0].inSlope
+      propertyPath: coinCount
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].inSlope
-      value: -0.009345185
-      objectReference: {fileID: 0}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: -6127694108565813698, guid: 51a21fea38e1f4ae7927eee1352f4626, type: 3}
     - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].inSlope
-      value: -2.0811918
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[0].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].outSlope
-      value: -0.009345185
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].inWeight
-      value: 0.058588903
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].outSlope
-      value: -2.0811918
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504284786917492572, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
+      propertyPath: mushroomPrefab
+      value: 
+      objectReference: {fileID: 8382912964201084092, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15188,63 +15068,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4124d23a9e305410d95b1f80a057a01e, type: 3}
---- !u!1001 &730154938131068058
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4377773852872892793, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8382912964201084092, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
-      propertyPath: m_Name
-      value: Mushroom
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e90c24cf715f4474081a8a2bca1e3bc3, type: 3}
 --- !u!1001 &4383688937143139254
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15297,78 +15120,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MystryBolck
       objectReference: {fileID: 0}
-    - target: {fileID: 796944354790644096, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 796944354790644096, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_TagString
-      value: Mystry Block
+    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
+      propertyPath: coinCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: bolckType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].time
-      value: 0.5042787
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].time
-      value: 0.9958455
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].value
-      value: 0.50448173
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].value
-      value: -0.0023805532
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[0].inSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].inSlope
-      value: -0.009345185
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].inSlope
-      value: -2.0811918
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[0].outSlope
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].inWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].outSlope
-      value: -0.009345185
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].inWeight
-      value: 0.058588903
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[2].outSlope
-      value: -2.0811918
-      objectReference: {fileID: 0}
-    - target: {fileID: 1639116106992384954, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: animationCurve.m_Curve.Array.data[1].outWeight
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7504284786917492572, guid: c7185783a470b4579807fab4ee3739b1, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
+      propertyPath: emptySprite
+      value: 
+      objectReference: {fileID: -6127694108565813698, guid: 51a21fea38e1f4ae7927eee1352f4626, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15496,7 +15255,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 549196438024411029}
   - {fileID: 1918659878}
-  - {fileID: 730154938131068058}
   - {fileID: 7512893465336244056}
   - {fileID: 1447889563}
   - {fileID: 1199998664}
