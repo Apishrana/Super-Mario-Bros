@@ -27,5 +27,12 @@ public class MystryBolckConroller : MonoBehaviour
     public void hit(PlayerMovement player)
     {
         Debug.Log(player);
+        Destroy(this);
+    }
+    void OnDestroy()
+    {
+        Destroy(transform.GetComponent<Animation>());
+        Destroy(transform.GetComponent<Animator>());
+        sprite.GetComponent<SpriteRenderer>().sprite = emptySprite;
     }
 }
