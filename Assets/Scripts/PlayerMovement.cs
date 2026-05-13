@@ -52,9 +52,9 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckRadius * 8, groundCheckRadius), 0f, groundLayer);
 
-        if (!isGrounded && Grown)
+        if (!isGrounded )
         {
-            headCheck.checkHead();
+            headCheck.checkHead(Grown);
         }
         if (isGrounded)
         {

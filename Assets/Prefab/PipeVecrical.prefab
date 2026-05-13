@@ -98,7 +98,7 @@ MonoBehaviour:
   tpPos: {x: 5.5, y: -7}
   camY: -12.9
   camMinX: 11.05
-  camMaxX: 13
+  camMaxX: 11.05
 --- !u!1 &5647252581958086828
 GameObject:
   m_ObjectHideFlags: 0

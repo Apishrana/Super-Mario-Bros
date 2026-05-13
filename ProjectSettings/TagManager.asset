@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Bounds
   - Coins
+  - Mystry Block
   layers:
   - Default
   - TransparentFX
