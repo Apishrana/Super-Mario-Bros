@@ -47,12 +47,14 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Crouch.started += ctx => crouched = true;
         inputActions.Player.Crouch.canceled += ctx => crouched = false;
         inputActions.Player.Move.canceled += ctx => MoveAxes = 0;
+
+        DontDestroyOnLoad(gameObject);
     }
     void Update()
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckRadius * 8, groundCheckRadius), 0f, groundLayer);
 
-        if (!isGrounded )
+        if (!isGrounded)
         {
             headCheck.checkHead(Grown);
         }

@@ -10,6 +10,7 @@ public class HeadCheck : MonoBehaviour
     [SerializeField] private AnimationCurve animationCurve;
     [SerializeField] private float animationDuration = 0.25f;
     [SerializeField] private float moveDistance = 0.25f;
+    public GameObject bolckPartical;
     private readonly System.Collections.Generic.HashSet<Vector3Int> animatingTiles = new();
 
     public void checkHead(bool grown)
@@ -40,7 +41,10 @@ public class HeadCheck : MonoBehaviour
                     if (tilemap.GetTile(cellPos))
                     {
                         if (grown)
+                        {
                             tilemap.SetTile(cellPos, null);
+                            Instantiate(bolckPartical, transform.position + Vector3.up * 2, Quaternion.identity);
+                        }
                         else
                         {
                             if (!animatingTiles.Contains(cellPos))
@@ -53,7 +57,10 @@ public class HeadCheck : MonoBehaviour
                         if (tilemap.GetTile(cellPos))
                         {
                             if (grown)
+                            {
                                 tilemap.SetTile(cellPos, null);
+                                Instantiate(bolckPartical, transform.position + Vector3.up * 2, Quaternion.identity);
+                            }
                             else
                             {
                                 if (!animatingTiles.Contains(cellPos))
@@ -66,7 +73,10 @@ public class HeadCheck : MonoBehaviour
                             if (tilemap.GetTile(cellPos))
                             {
                                 if (grown)
+                                {
                                     tilemap.SetTile(cellPos, null);
+                                    Instantiate(bolckPartical, transform.position + Vector3.up * 2, Quaternion.identity);
+                                }
                                 else
                                 {
                                     if (!animatingTiles.Contains(cellPos))

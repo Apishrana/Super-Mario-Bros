@@ -290,6 +290,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 200
+  coinCount: 0
 --- !u!114 &7545137561860932319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +308,42 @@ MonoBehaviour:
   layer:
     serializedVersion: 2
     m_Bits: 64
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1.0001265
+      outSlope: 1.0001265
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.49987578
+      value: 0.49993902
+      inSlope: 0.00012636185
+      outSlope: 0.00012636185
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9998474
+      value: 0.000030517578
+      inSlope: -0.99987376
+      outSlope: -0.99987376
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  animationDuration: 0.25
+  moveDistance: 0.5
+  bolckPartical: {fileID: 6510399463802339573, guid: 10b4c37eeaac54dab8d157bbb40e4929, type: 3}
 --- !u!95 &3009592988080293233
 Animator:
   serializedVersion: 7

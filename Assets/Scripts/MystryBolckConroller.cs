@@ -39,6 +39,9 @@ public class MystryBolckConroller : MonoBehaviour
 
         yield return StartCoroutine(AnimateBlock());
 
+        transform.GetComponent<Animation>().enabled = true;
+        transform.GetComponent<Animator>().enabled = true;
+
         switch (bolckType)
         {
             case BolckType.Coin:
@@ -70,6 +73,9 @@ public class MystryBolckConroller : MonoBehaviour
     }
     private IEnumerator AnimateBlock()
     {
+        transform.GetComponent<Animation>().enabled = false;
+        transform.GetComponent<Animator>().enabled = false;
+        sprite.GetComponent<SpriteRenderer>().sprite = emptySprite;
         isAnimating = true;
         Vector3 startPos = sprite.localPosition;
         float time = 0f;

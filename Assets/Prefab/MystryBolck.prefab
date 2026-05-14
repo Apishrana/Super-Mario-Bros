@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 306ab15b8eb2444009a75a5d553b11d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MystryBolckConroller
-  emptySprite: {fileID: 0}
+  emptySprite: {fileID: -6127694108565813698, guid: 51a21fea38e1f4ae7927eee1352f4626, type: 3}
   sprite: {fileID: 0}
   bolckType: 0
   animationCurve:
@@ -168,7 +168,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  coinCount: 0
+  coinCount: 1
   mushroomPrefab: {fileID: 0}
   starPrefab: {fileID: 0}
   animationDuration: 0.25
