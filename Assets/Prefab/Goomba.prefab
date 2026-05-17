@@ -300,7 +300,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -368,5 +368,5 @@ MonoBehaviour:
   rad: 0.1
   ground:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 520
   deathSprite: {fileID: 5206537619807622152, guid: 8d26b78d4f6a54ae881f8c1df52e5384, type: 3}
