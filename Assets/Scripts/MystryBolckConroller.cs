@@ -6,6 +6,8 @@ public class MystryBolckConroller : MonoBehaviour
     [SerializeField]
     private Sprite emptySprite;
     [SerializeField]
+    private Sprite defaultSprite;
+    [SerializeField]
     private Transform sprite;
     public enum BolckType { Coin, Mushroom, Star };
     [SerializeField]
@@ -22,6 +24,8 @@ public class MystryBolckConroller : MonoBehaviour
     private float animationDuration = 0.25f;
     [SerializeField]
     private float moveDistance = 0.5f;
+    [SerializeField]
+    private bool block = true;
     private bool isAnimating;
     void Start()
     {
@@ -38,10 +42,15 @@ public class MystryBolckConroller : MonoBehaviour
         }
 
         yield return StartCoroutine(AnimateBlock());
-
-        transform.GetComponent<Animation>().enabled = true;
-        transform.GetComponent<Animator>().enabled = true;
-
+        if (block)
+        {
+            transform.GetComponent<Animation>().enabled = true;
+            transform.GetComponent<Animator>().enabled = true;
+        }
+        else
+        {
+            sprite.GetComponent<SpriteRenderer>().sprite = defaultSprite;
+        }
         switch (bolckType)
         {
             case BolckType.Coin:
@@ -73,8 +82,11 @@ public class MystryBolckConroller : MonoBehaviour
     }
     private IEnumerator AnimateBlock()
     {
-        transform.GetComponent<Animation>().enabled = false;
-        transform.GetComponent<Animator>().enabled = false;
+        if (block)
+        {
+            transform.GetComponent<Animation>().enabled = false;
+            transform.GetComponent<Animator>().enabled = false;
+        }
         sprite.GetComponent<SpriteRenderer>().sprite = emptySprite;
         isAnimating = true;
         Vector3 startPos = sprite.localPosition;
@@ -93,8 +105,12 @@ public class MystryBolckConroller : MonoBehaviour
     }
     void OnDestroy()
     {
-        Destroy(transform.GetComponent<Animation>());
-        Destroy(transform.GetComponent<Animator>());
+        if (block)
+
+        {
+            Destroy(transform.GetComponent<Animation>());
+            Destroy(transform.GetComponent<Animator>());
+        }
         sprite.GetComponent<SpriteRenderer>().sprite = emptySprite;
     }
 }

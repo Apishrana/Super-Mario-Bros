@@ -7,6 +7,8 @@ public class MystryBolckConrollerDrawer : Editor
     {
         serializedObject.Update();
         SerializedProperty emptySprite = serializedObject.FindProperty("emptySprite");
+        SerializedProperty defaultSprite = serializedObject.FindProperty("defaultSprite");
+        SerializedProperty block = serializedObject.FindProperty("block");
         SerializedProperty bolckType = serializedObject.FindProperty("bolckType");
         SerializedProperty animationCurve = serializedObject.FindProperty("animationCurve");
         SerializedProperty animationDuration = serializedObject.FindProperty("animationDuration");
@@ -15,6 +17,7 @@ public class MystryBolckConrollerDrawer : Editor
         SerializedProperty mushroomPrefab = serializedObject.FindProperty("mushroomPrefab");
         SerializedProperty starPrefab = serializedObject.FindProperty("starPrefab");
         EditorGUILayout.PropertyField(emptySprite);
+        EditorGUILayout.PropertyField(block);
         EditorGUILayout.PropertyField(bolckType);
         EditorGUILayout.PropertyField(animationCurve);
         EditorGUILayout.PropertyField(animationDuration);
@@ -35,6 +38,10 @@ public class MystryBolckConrollerDrawer : Editor
             case MystryBolckConroller.BolckType.Star:
                 EditorGUILayout.PropertyField(starPrefab);
                 break;
+        }
+        if (!block.boolValue)
+        {
+            EditorGUILayout.PropertyField(defaultSprite);
         }
 
         serializedObject.ApplyModifiedProperties();
