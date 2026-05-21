@@ -19,6 +19,8 @@ public class MystryBolckConroller : MonoBehaviour
     [SerializeField]
     private GameObject mushroomPrefab;
     [SerializeField]
+    private GameObject flowerPrefab;
+    [SerializeField]
     private GameObject starPrefab;
     [SerializeField]
     private float animationDuration = 0.25f;
@@ -63,9 +65,14 @@ public class MystryBolckConroller : MonoBehaviour
                 break;
 
             case BolckType.Mushroom:
-                if (mushroomPrefab != null)
+                if (!player.GetComponent<PlayerMovement>().Grown)
                 {
                     Instantiate(mushroomPrefab, transform.position + Vector3.up, Quaternion.identity);
+
+                }
+                else
+                {
+                    Instantiate(flowerPrefab, transform.position + Vector3.up, Quaternion.identity);
                 }
                 Destroy(this);
                 break;

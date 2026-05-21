@@ -15,6 +15,7 @@ public class MystryBolckConrollerDrawer : Editor
         SerializedProperty moveDistance = serializedObject.FindProperty("moveDistance");
         SerializedProperty coinCount = serializedObject.FindProperty("coinCount");
         SerializedProperty mushroomPrefab = serializedObject.FindProperty("mushroomPrefab");
+        SerializedProperty flowerPrefab = serializedObject.FindProperty("flowerPrefab");
         SerializedProperty starPrefab = serializedObject.FindProperty("starPrefab");
         EditorGUILayout.PropertyField(emptySprite);
         EditorGUILayout.PropertyField(block);
@@ -33,6 +34,7 @@ public class MystryBolckConrollerDrawer : Editor
 
             case MystryBolckConroller.BolckType.Mushroom:
                 EditorGUILayout.PropertyField(mushroomPrefab);
+                EditorGUILayout.PropertyField(flowerPrefab);
                 break;
 
             case MystryBolckConroller.BolckType.Star:

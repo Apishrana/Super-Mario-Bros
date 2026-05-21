@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: 5ac3e11cb7564468d803d0f63510bafe
+guid: ce6af41a2f9c448eb9fef5b05ced90ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6166946180807122926
-    second: CoinUG_0
-  - first:
-      213: -3688406820341408944
-    second: CoinUG_1
-  - first:
-      213: -1612100986492886198
-    second: CoinUG_2
-  - first:
-      213: 4014756500453605521
-    second: CoinUG_3
-  - first:
-      213: -6956714437244172602
-    second: CoinUG_4
-  - first:
-      213: 5310864191985486363
-    second: CoinUG_5
+      213: 3373568495408583166
+    second: Flower_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -90,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -128,73 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CoinUG_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 17
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: eefd5f7a0e4659550800000000000000
-      internalID: 6166946180807122926
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CoinUG_1
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 17
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 05b1c66f98520dcc0800000000000000
-      internalID: -3688406820341408944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CoinUG_2
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 17
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a43e80ea1baa0a9e0800000000000000
-      internalID: -1612100986492886198
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: CoinUG_3
+      name: Flower_0
       rect:
         serializedVersion: 2
         x: 0
@@ -209,17 +128,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1904a3d14c747b730800000000000000
-      internalID: 4014756500453605521
+      spriteID: ef117423ca251de20800000000000000
+      internalID: 3373568495408583166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CoinUG_4
+      name: Flower_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 16
         y: 0
         width: 16
         height: 16
@@ -229,19 +148,19 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6c6ca3cd319c47f90800000000000000
-      internalID: -6956714437244172602
+      spriteID: 091c26af842184d738b77b7c7f73cec8
+      internalID: 1156883976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CoinUG_5
+      name: Flower_2
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 0
         width: 16
         height: 16
@@ -251,10 +170,32 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: b1a03ad28daf3b940800000000000000
-      internalID: 5310864191985486363
+      spriteID: 2cd7dae3fa2fa422ba63a42ee1c05060
+      internalID: 43834380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Flower_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1480533af314f24afd5c8ac4662694
+      internalID: -1122319143
       vertices: []
       indices: 
       edges: []
@@ -263,7 +204,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 9d1dadb62166d4140920caba1683eee9
+    spriteID: 28b5a56d9b1f3441eb15e36e42ae6c23
     internalID: 0
     vertices: []
     indices: 
@@ -273,14 +214,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":1.0,"y":1.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      CoinUG_0: 6166946180807122926
-      CoinUG_1: -3688406820341408944
-      CoinUG_2: -1612100986492886198
-      CoinUG_3: 4014756500453605521
-      CoinUG_4: -6956714437244172602
-      CoinUG_5: 5310864191985486363
+      Flower_0: 3373568495408583166
+      Flower_1: 1156883976
+      Flower_2: 43834380
+      Flower_3: -1122319143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

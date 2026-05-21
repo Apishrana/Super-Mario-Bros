@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private SpriteRenderer sprite;
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
-    private bool Grown = false;
+    public bool Grown = false;
 
     private bool unKillable = false;
 
