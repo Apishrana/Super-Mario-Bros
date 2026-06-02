@@ -29,11 +29,11 @@ public class PlayerAnimate : MonoBehaviour
     }
     public void Sprint()
     {
-        animator.SetFloat("WalkSpeed", 1.25f);
+        animator.SetFloat("WalkSpeed", 1);
     }
     public void StopSprint()
     {
-        animator.SetFloat("WalkSpeed", 1f);
+        animator.SetFloat("WalkSpeed", 0.85f);
     }
 
     public void grow()

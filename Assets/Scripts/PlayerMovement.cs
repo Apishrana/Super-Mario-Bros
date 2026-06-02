@@ -26,6 +26,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundCheckRadius;
     [SerializeField] private LayerMask groundLayer;
     public bool Grown = false;
+    public bool Fire = false;
+    [SerializeField] private Material fireMaterial;
+    [SerializeField] private Material NormalMaterial;
 
     private bool unKillable = false;
 
@@ -44,8 +47,25 @@ public class PlayerMovement : MonoBehaviour
         inputActions.Player.Jump.performed += Jump;
         inputActions.Player.HighJump.performed += HighJump;
         inputActions.Player.Move.performed += Move;
-        inputActions.Player.Crouch.started += ctx => crouched = true;
+        inputActions.Player.Crouch.started += ctx =>
+        {
+            if (Grown)
+                crouched = true;
+        };
         inputActions.Player.Crouch.canceled += ctx => crouched = false;
+        inputActions.Player.Sprint.started += ctx =>
+        {
+
+            playerAnimate.Sprint();
+            Speed = Speed / 0.75f;
+        };
+        inputActions.Player.Sprint.canceled += ctx =>
+        {
+
+            playerAnimate.StopSprint();
+            Speed = Speed * 0.75f;
+        };
+
         inputActions.Player.Move.canceled += ctx => MoveAxes = 0;
 
         DontDestroyOnLoad(gameObject);
@@ -54,7 +74,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isGrounded = Physics2D.OverlapBox(groundCheck.position, new Vector2(groundCheckRadius * 8, groundCheckRadius), 0f, groundLayer);
 
-        if (!isGrounded)
+        if (!isGrounded && rb.linearVelocityY >= 0)
         {
             headCheck.checkHead(Grown);
         }
@@ -155,6 +175,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerAnimate.shrink();
                 Grown = false;
+                Fire = false;
+                sprite.material = NormalMaterial;
                 unKillable = true;
                 playerAnimate.Unkillable(true);
                 StartCoroutine(StopUnkillable(1.333f));
@@ -162,6 +184,7 @@ public class PlayerMovement : MonoBehaviour
             if (!Grown && !unKillable)
             {
                 playerAnimate.dead();
+                Destroy(this);
             }
         }
     }
@@ -248,6 +271,22 @@ public class PlayerMovement : MonoBehaviour
 
             }
             finally { }
+        }
+        if (other.gameObject.CompareTag("Flower"))
+        {
+            Fire = true;
+            sprite.material = fireMaterial;
+            Destroy(other.gameObject);
+        }
+    }
+    private IEnumerator slowToZero(float dur)
+    {
+        float time = 0f;
+
+        while (time < dur)
+        {
+            time += Time.deltaTime;
+            yield return null;
         }
     }
 }
