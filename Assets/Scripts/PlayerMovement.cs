@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Material fireMaterial;
     [SerializeField] private Material NormalMaterial;
 
+    [SerializeField] private AnimationCurve slowCurve;
+    private Coroutine slowToZeroCoroutine;
     private bool unKillable = false;
 
     public int coinCount;
@@ -66,7 +68,13 @@ public class PlayerMovement : MonoBehaviour
             Speed = Speed * 0.75f;
         };
 
-        inputActions.Player.Move.canceled += ctx => MoveAxes = 0;
+        inputActions.Player.Move.canceled += ctx =>
+        {
+            if (slowToZeroCoroutine != null)
+                StopCoroutine(slowToZeroCoroutine);
+
+            slowToZeroCoroutine = StartCoroutine(slowToZero(0.3f));
+        };
 
         DontDestroyOnLoad(gameObject);
     }
@@ -142,9 +150,14 @@ public class PlayerMovement : MonoBehaviour
 
     void Move(InputAction.CallbackContext context)
     {
+        if (slowToZeroCoroutine != null)
+        {
+            StopCoroutine(slowToZeroCoroutine);
+            slowToZeroCoroutine = null;
+        }
+
         if (!crouched)
             MoveAxes = context.ReadValue<float>();
-
     }
     void EnterPipe(Pipe pipe)
     {
@@ -281,12 +294,16 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator slowToZero(float dur)
     {
+        float startValue = MoveAxes;
         float time = 0f;
 
         while (time < dur)
         {
             time += Time.deltaTime;
+            MoveAxes = Mathf.Lerp(startValue, 0f, time / dur);
             yield return null;
         }
+        MoveAxes = 0f;
+        slowToZeroCoroutine = null;
     }
 }
