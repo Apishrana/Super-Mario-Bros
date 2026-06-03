@@ -306,4 +306,9 @@ public class PlayerMovement : MonoBehaviour
         MoveAxes = 0f;
         slowToZeroCoroutine = null;
     }
+
+    void OnDestroy()
+    {
+        Destroy(rb);
+    }
 }

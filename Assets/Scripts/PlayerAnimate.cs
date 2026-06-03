@@ -62,5 +62,9 @@ public class PlayerAnimate : MonoBehaviour
 
         animator.SetTrigger("Dead");
     }
+    public void kill()
+    {
+        Destroy(gameObject);
+    }
 
 }

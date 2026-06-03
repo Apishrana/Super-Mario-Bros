@@ -16317,10 +16317,6 @@ PrefabInstance:
       propertyPath: Cam
       value: 
       objectReference: {fileID: 519420033}
-    - target: {fileID: 8734029043079174329, guid: 4124d23a9e305410d95b1f80a057a01e, type: 3}
-      propertyPath: NormalMaterial
-      value: 
-      objectReference: {fileID: 2100000, guid: 07134eef07adc4c8c99a8d5e69722b0b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

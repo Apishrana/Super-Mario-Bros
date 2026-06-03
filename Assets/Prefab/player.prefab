@@ -291,7 +291,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 200
   Grown: 0
+  Fire: 0
   fireMaterial: {fileID: -876546973899608171, guid: 204aa085ace2c4ebebd21e3fd5b30b84, type: 3}
+  NormalMaterial: {fileID: 2100000, guid: 07134eef07adc4c8c99a8d5e69722b0b, type: 2}
+  slowCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   coinCount: 0
 --- !u!114 &7545137561860932319
 MonoBehaviour:
