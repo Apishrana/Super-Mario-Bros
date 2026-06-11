@@ -66,5 +66,9 @@ public class PlayerAnimate : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void OnDestroy()
+    {
 
+        UnityEngine.SceneManagement.SceneManager.LoadScene("1-1");
+    }
 }

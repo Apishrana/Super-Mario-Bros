@@ -210,6 +210,14 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Finish"))
+        {
+
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Coming soon");
+        }
+        {
+
+        }
         if (other.gameObject.CompareTag("Pipe"))
         {
             Pipe pipe = other.transform.GetComponentInParent<Pipe>();

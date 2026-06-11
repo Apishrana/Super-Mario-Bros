@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 83538846}
   m_Layer: 0
   m_Name: Pole
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15785,7 +15785,7 @@ Tilemap:
       - {fileID: -6956714437244172602, guid: 5ac3e11cb7564468d803d0f63510bafe, type: 3}
       - {fileID: 5310864191985486363, guid: 5ac3e11cb7564468d803d0f63510bafe, type: 3}
       - {fileID: 4014756500453605521, guid: 5ac3e11cb7564468d803d0f63510bafe, type: 3}
-      m_AnimationSpeed: 5
+      m_AnimationSpeed: 5.0000005
       m_AnimationTimeOffset: 0
       m_Flags: 16
   - first: {x: 12, y: -15, z: 0}
