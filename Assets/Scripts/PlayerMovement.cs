@@ -215,9 +215,6 @@ public class PlayerMovement : MonoBehaviour
 
             UnityEngine.SceneManagement.SceneManager.LoadScene("Coming soon");
         }
-        {
-
-        }
         if (other.gameObject.CompareTag("Pipe"))
         {
             Pipe pipe = other.transform.GetComponentInParent<Pipe>();
